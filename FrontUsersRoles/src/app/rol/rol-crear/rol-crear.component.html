@@ -1,0 +1,13 @@
+<mat-card>
+    <h1  class="crear-rol-field">Crear Nuevo Rol</h1>
+    <form [formGroup]="rolForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="crear-rol-field">
+        <input matInput placeholder="Nombre del rol" formControlName="nombre" >  
+      </mat-form-field>
+      <mat-form-field class="crear-rol-field">
+        <input matInput placeholder="Descripción del rol"formControlName="descripcion">
+      </mat-form-field>
+      <button mat-raised-button [disabled]="!rolForm.valid" color="primary">Crer Nuevo</button>
+      <button mat-raised-button [routerLink]="['../listar']" color="warn">Cancelar</button>
+    </form>
+  </mat-card>

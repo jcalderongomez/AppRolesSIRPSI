@@ -1,0 +1,35 @@
+
+<mat-card>
+    
+    <h1 class="crear-usuario-field">Crear Nuevo Usuario</h1>
+    <form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()">      
+      <mat-form-field class="crear-usuario-field">
+        <input matInput placeholder="Nombre del usuario" formControlName="Nombre">  
+      </mat-form-field>
+      <mat-form-field class="crear-usuario-field">
+        <input matInput placeholder="Cédula del usuario" formControlName="Cedula">
+      </mat-form-field>
+      <mat-form-field class="crear-usuario-field">
+        <input matInput placeholder="Correo del usuario" formControlName="Email">
+      </mat-form-field>
+      <mat-form-field class="crear-usuario-field">
+        <input matInput placeholder="Username del usuario" formControlName="UserName">  
+      </mat-form-field>
+      <mat-form-field class="crear-usuario-field">
+        <input matInput placeholder="Password del usuario" formControlName="Password">  
+      </mat-form-field>
+      <mat-form-field class="crear-usuario-field">
+        <mat-label>Seleccione una opción</mat-label>
+        <mat-label>Selecione una opción</mat-label>
+        <mat-select formControlName="Estado">
+          <mat-option [value]="true">Activo</mat-option>
+          <mat-option [value]="false">Inactivo</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      
+      
+      <button mat-raised-button [disabled]="!usuarioForm.valid" color="primary">Crer Nuevo</button>
+      <button mat-raised-button [routerLink]="['../listar']" color="warn">Cancelar</button>
+    </form>
+  </mat-card>

@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Eliminar Empresa</h2>
+<mat-dialog-content>
+    <mat-label name="label"></mat-label>
+   <h1>¿Desea Eliminar la Empresa "{{ this.nombre }}" ?</h1>
+    
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button  mat-dialog-close color="primary">Cancelar</button>
+    <button mat-raised-button (click)="eliminarUsuario()" color="warn">Eliminar</button>
+</mat-dialog-actions>

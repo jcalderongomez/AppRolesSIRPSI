@@ -1,0 +1,66 @@
+<div style= "width: 70%; margin:40px auto">
+    <div>
+    <h1>Lista de Psicologos</h1>
+    <button mat-raised-button color="primary" [routerLink]="['../crear']" >Nuevo Psicólogo</button>
+</div>
+
+    <mat-form-field>
+        <mat-label>Filtro</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+    </mat-form-field>
+
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+            
+            <!-- Position Column -->
+            <ng-container matColumnDef="psicologoId">
+                <th mat-header-cell *matHeaderCellDef> Psicologo Id </th>
+                <td mat-cell *matCellDef="let element"> {{element.psicologoId}} </td>
+            </ng-container>
+    
+            <!-- Name Column -->
+            <ng-container matColumnDef="matricula">
+                <th mat-header-cell *matHeaderCellDef> Matricula Profesional </th>
+                <td mat-cell *matCellDef="let element"> {{element.matriculaProfesional}} </td>
+            </ng-container>
+    
+            <!-- Name Column -->
+            <ng-container matColumnDef="especializacion">
+                <th mat-header-cell *matHeaderCellDef> Especialización </th>
+                <td mat-cell *matCellDef="let element"> {{element.especializacion}} </td>
+            </ng-container>
+    
+            <!-- Name Column -->
+            <ng-container matColumnDef="usuario">
+                <th mat-header-cell *matHeaderCellDef> Usuario </th>
+                <td mat-cell *matCellDef="let element"> {{element.usuario.nombre}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="centroApoyo">
+                <th mat-header-cell *matHeaderCellDef> Centro de Apoyo </th>
+                <td mat-cell *matCellDef="let element"> {{element.centroApoyo.nombre}} </td>
+            </ng-container>
+                                
+        
+            <ng-container matColumnDef="Acciones">
+                <th mat-header-cell *matHeaderCellDef> </th>
+                <td mat-cell *matCellDef="let element"> 
+                    <button (click)="actualizarUsuario(element)" mat-icon-button color="primary" >
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button [routerLink]="['../eliminar', element.id]" mat-icon-button color="warn">
+                    <mat-icon>delete</mat-icon>
+                    </button>              
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+  
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                       showFirstLastButtons
+                    aria-label="Select page of periodic elements">
+        </mat-paginator>
+    </div>
+</div>

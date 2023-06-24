@@ -1,0 +1,26 @@
+<h2 mat-dialog-title>Actualizar Rol Usuario</h2>
+<mat-dialog-content [formGroup]="form">
+  <br/>
+  
+  <mat-form-field class="crear-empresa-field">
+    <mat-label>Seleccione el usuario</mat-label>
+    <mat-select  formControlName="usuarioId">
+      <mat-option *ngFor="let item of opcionesUsuario" [value]="item.usuarioId">{{item.nombre}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br/>
+  
+  <mat-form-field class="crear-empresa-field">
+    <mat-label>Seleccione el rol</mat-label>
+    <mat-select  formControlName="rolId">
+      <mat-option *ngFor="let item of opcionesRol" [value]="item.rolId">{{item.nombre}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br/>
+  
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button (click)="cerrar()">Cerrar</button>
+    <button mat-raised-button color="primary" (click)="guardar()">Guardar</button>
+</mat-dialog-actions>

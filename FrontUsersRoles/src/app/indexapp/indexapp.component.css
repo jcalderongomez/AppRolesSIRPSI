@@ -1,0 +1,203 @@
+/* Estilo general del body */
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../../assets/img_sirspi/fondo.png) no-repeat center top;
+    background-size: cover;
+    /* para ajustar la imagen de fondo */
+    font-family: Helvetica;
+    min-height: 100vh;
+    background-position: center bottom;
+  }
+  
+  /* Estilo del formulario de LOGIN */
+  .login-box {
+    width: 360px;
+    height: auto;
+    /* Altura automática para ajustarse al contenido */
+    background: #ffffff;
+    /* color Bienvenido/a */
+    color: rgb(34, 88, 163);
+    /* subir o bajar bloque de opciones */
+    top: 43%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    /* Para centrar el formulario */
+    box-sizing: border-box;
+    padding: 30px 30px 20px 30px;
+    /* Padding: arriba, derecha, abajo, izquierda */
+    border-radius: 15px;
+    text-align: center;
+    /* Para centrar el contenido del formulario */
+  }
+  
+  /* Estilos del logotipo */
+  .logotipo {
+    max-width: 300px;
+    margin: 0 auto 30px auto;
+    display: block;
+  }
+  
+  /* Estilos del botón de LOGIN */
+  .login-box button {
+    display: block;
+    width: 70%;
+    margin: 10px auto;
+    padding: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(206, 216, 231);
+    color: #000000;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  /* Estilos del botón de inicio de sesión al pasar el cursor sobre él */
+  .login-box button:hover {
+    background-color: rgb(102, 172, 230);
+  }
+  
+  /*-----------------------------------------------------------------------------------*/
+  /*-----------------------------------------------------------------------------------*/
+  /* Estilos para posicionar los botones "?" */
+  #info-iniciar-sesion {
+    position: absolute;
+    top: calc(50% - 0.4cm);
+    right: 40px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  #info-registrar-empresa {
+    position: absolute;
+    top: calc(50% + 0.9cm);
+    right: 40px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  #info-tutoriales {
+    position: absolute;
+    top: calc(50% + 2.1cm);
+    right: 40px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  #info-ayuda-soporte {
+    position: absolute;
+    top: calc(50% + 3.3cm);
+    right: 40px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  /*-----------------------------------------------------------------------------------*/
+  /*-----------------------------------------------------------------------------------*/
+  /* Estilos para posicionar y dar formato a los cuadros emergentes */
+  #mensaje-iniciar-sesion {
+    position: absolute;
+      top: calc(50% + 3cm);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgb(255, 255, 255);
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+      /* Cambiar el ancho de la ventana emergente */
+    }
+  
+  #mensaje-registrar-empresa {
+    position: absolute;
+      top: calc(50% + 3cm);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgb(255, 255, 255);
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+      /* Cambiar el ancho de la ventana emergente */
+    }
+  
+  #mensaje-tutoriales-capacitacion {
+      position: absolute;
+        top: calc(50% + 3cm);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        border-radius: 10px;
+        width: 400px;
+        /* Cambiar el ancho de la ventana emergente */
+      }
+  
+  #mensaje-ayuda-soporte {
+    position: absolute;
+    top: calc(50% + 3cm);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px; /* Cambiar el ancho de la ventana emergente */
+    }  
+  
+  /* Ubicar ventanas emergentes por delante de los botones "?" */
+  #mensaje-iniciar-sesion,
+  #mensaje-registrar-empresa,
+  #mensaje-tutoriales-capacitacion,
+  #mensaje-ayuda-soporte {
+    z-index: 1;
+  }
+  
+  /* Color título ventana emergente y texto mensaje */
+  
+  .titulo-mensaje {
+    color: rgb(99, 4, 4);
+    /* Cambiar el color del título */
+  }
+  .texto-mensaje {
+    color: black;
+    /* Cambiar el color del texto */
+  }
+  
+  /* Justificar texto ventanas emergentes */
+  .texto-mensaje {
+    text-align: justify;
+  
+  }/*-----------------------------------------------------------------------------------*/
+  /*-----------------------------------------------------------------------------------*/
+  
+  /* Estilos y tamaño para el botón "Aceptar"*/
+  #aceptar {
+    display: block;
+    margin-top: 5px;
+      width: 3cm;
+        height: 0,91cm;
+  }
+  
+  #aceptar-2 {
+    display: block;
+    margin-top: 5px;
+        width: 3cm;
+          height: 0, 91cm;
+  }
+  
+  #aceptar-3 {
+    display: block;
+    margin-top: 5px;
+        width: 3cm;
+          height: 0, 91cm;
+  }
+  
+  #aceptar-4 {
+    display: block;
+    margin-top: 5px;
+        width: 3cm;
+          height: 0, 91cm;
+  }

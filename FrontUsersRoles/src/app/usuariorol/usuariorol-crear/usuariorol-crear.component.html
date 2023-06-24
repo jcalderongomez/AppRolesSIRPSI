@@ -1,0 +1,26 @@
+<p>usuariorol-crear works!</p>
+
+<mat-card>
+    <h1  class="crear-usuariorol-field">Crear Nuevo Rol por Empleado</h1>
+      <form [formGroup]="usuarioRolForm" (ngSubmit)="onSubmit()">      
+        <mat-form-field class="crear-usuariorol-field">
+          <mat-label>Seleccione un usuario</mat-label>
+          <mat-select [(value)]="selectedUsuario" formControlName="usuarioId">
+                  <mat-option *ngFor="let usuario of opcionesUsuario" [value]="usuario.usuarioId">
+                    {{usuario.nombre}}
+                  </mat-option>
+                </mat-select>
+        </mat-form-field>
+        <mat-form-field class="crear-usuariorol-field">
+          <mat-label>Seleccione el rol a asignar</mat-label>
+          <mat-select [(value)]="selectedRol" formControlName="rolId">
+              <mat-option *ngFor="let rol of opcionesRol" [value]="rol.rolId">
+                {{rol.nombre}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button mat-raised-button [disabled]="!usuarioRolForm.valid" color="primary">Crer Nuevo Rol</button>
+        <button mat-raised-button [routerLink]="['../usuariorol/listar']" color="warn">Cancelar</button>
+      </form>
+    </mat-card>
+    

@@ -1,0 +1,69 @@
+<div style= "width: 70%; margin:40px auto">
+    <div>
+    <h1>Lista de Centros de Apoyo</h1>
+    <button mat-raised-button color="primary" [routerLink]="['../crear']" >Nuevo Centro de Apoyo</button>
+</div>
+
+    <mat-form-field>
+        <mat-label>Filtro</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+    </mat-form-field>
+
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+            
+            <!-- Position Column -->
+            <ng-container matColumnDef="centroApoyoId">
+                <th mat-header-cell *matHeaderCellDef> Centro de ApoyoId Id </th>
+                <td mat-cell *matCellDef="let element"> {{element.centroApoyoId}} </td>
+            </ng-container>
+    
+        <!-- Name Column -->
+            <ng-container matColumnDef="nombre">
+                <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+            </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="empresaId">
+        <th mat-header-cell *matHeaderCellDef> Empresa Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.empresaId}} </td>
+    </ng-container>
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="empresa">
+            <th mat-header-cell *matHeaderCellDef>Empresa</th>
+            <td mat-cell *matCellDef="let element"> {{element.empresa.nombre}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+            <ng-container matColumnDef="fechaRegistro">
+                <th mat-header-cell *matHeaderCellDef> Fecha del Registro </th>
+                <td mat-cell *matCellDef="let element"> {{element.fechaRegistro}} </td>
+            </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="fechaActualizacion">
+        <th mat-header-cell *matHeaderCellDef> Fecha de la Actualizacion </th>
+        <td mat-cell *matCellDef="let element"> {{element.fechaActualizacion}} </td>
+    </ng-container>
+    
+        
+    <ng-container matColumnDef="Acciones">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let element"> 
+            <button (click)="actualizarEmpresa(element)" mat-icon-button color="primary" >
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button [routerLink]="['../eliminar', element.id]" mat-icon-button color="warn">
+              <mat-icon>delete</mat-icon>
+            </button>              
+        </td>
+    </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+  
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                       showFirstLastButtons
+                    aria-label="Select page of periodic elements">
+        </mat-paginator>
+    </div>
+</div>

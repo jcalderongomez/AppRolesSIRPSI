@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Actualizar Modulo</h2>
+<mat-dialog-content [formGroup]="formModulo">
+    <mat-form-field class="crear-modulo-field">
+        <input matInput placeholder="Nombre del modulo" formControlName="nombre" >  
+      </mat-form-field>
+      <br/>
+      <mat-form-field class="crear-modulo-field">
+        <input matInput placeholder="Descripción del modulo"formControlName="descripcion">
+      </mat-form-field>
+      <br/>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button (click)="cerrar()">Cerrar</button>
+    <button mat-raised-button color="primary" (click)="guardar()">Guardar</button>
+</mat-dialog-actions>

@@ -1,0 +1,13 @@
+<mat-card>
+    <h1  class="crear-modulo-field">Crear Nuevo Módulo</h1>
+    <form [formGroup]="moduloForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="crear-modulo-field">
+        <input matInput placeholder="Nombre del modulo" formControlName="nombre" >  
+      </mat-form-field>
+      <mat-form-field class="crear-modulo-field">
+        <input matInput placeholder="Descripción del módulo"formControlName="descripcion">
+      </mat-form-field>
+      <button mat-raised-button [disabled]="!moduloForm.valid" color="primary">Crer Nuevo</button>
+      <button mat-raised-button [routerLink]="['../listar']" color="warn">Cancelar</button>
+    </form>
+  </mat-card>

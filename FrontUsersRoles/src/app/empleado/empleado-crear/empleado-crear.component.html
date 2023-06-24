@@ -1,0 +1,25 @@
+
+<mat-card>
+  <h1  class="crear-empleado-field">Crear Nuevo Empleado</h1>
+    <form [formGroup]="empleadoForm" (ngSubmit)="onSubmit()">      
+      <mat-form-field class="crear-empleado-field">
+        <mat-label>Seleccione un usuario</mat-label>
+        <mat-select [(value)]="selectedUsuario" formControlName="usuarioId">
+                <mat-option *ngFor="let usuario of opcionesUsuario" [value]="usuario.usuarioId">
+                  {{usuario.nombre}}
+                </mat-option>
+              </mat-select>
+      </mat-form-field>
+      <mat-form-field class="crear-empleado-field">
+        <mat-label>Seleccione el Centro de Apoyo</mat-label>
+        <mat-select [(value)]="selectedCentro" formControlName="centroApoyoId">
+            <mat-option *ngFor="let centro of opcionesCentro" [value]="centro.centroApoyoId">
+              {{centro.nombre}}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+      <button mat-raised-button [disabled]="!empleadoForm.valid" color="primary">Crer Nuevo</button>
+      <button mat-raised-button [routerLink]="['../listar']" color="warn">Cancelar</button>
+    </form>
+  </mat-card>
+  

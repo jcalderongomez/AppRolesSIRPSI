@@ -1,0 +1,12 @@
+D:\Desarrollos UCaldas\SistemaUsuarioRoles\Backend\Backend.API.Utilidades\bin\Debug\net7.0\Backend.API.Utilidades.deps.json
+D:\Desarrollos UCaldas\SistemaUsuarioRoles\Backend\Backend.API.Utilidades\bin\Debug\net7.0\Backend.API.Utilidades.dll
+D:\Desarrollos UCaldas\SistemaUsuarioRoles\Backend\Backend.API.Utilidades\bin\Debug\net7.0\Backend.API.Utilidades.pdb
+D:\Desarrollos UCaldas\SistemaUsuarioRoles\Backend\Backend.API.Utilidades\obj\Debug\net7.0\Backend.API.Utilidades.csproj.AssemblyReference.cache
+D:\Desarrollos UCaldas\SistemaUsuarioRoles\Backend\Backend.API.Utilidades\obj\Debug\net7.0\Backend.API.Utilidades.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desarrollos UCaldas\SistemaUsuarioRoles\Backend\Backend.API.Utilidades\obj\Debug\net7.0\Backend.API.Utilidades.AssemblyInfoInputs.cache
+D:\Desarrollos UCaldas\SistemaUsuarioRoles\Backend\Backend.API.Utilidades\obj\Debug\net7.0\Backend.API.Utilidades.AssemblyInfo.cs
+D:\Desarrollos UCaldas\SistemaUsuarioRoles\Backend\Backend.API.Utilidades\obj\Debug\net7.0\Backend.API.Utilidades.csproj.CoreCompileInputs.cache
+D:\Desarrollos UCaldas\SistemaUsuarioRoles\Backend\Backend.API.Utilidades\obj\Debug\net7.0\Backend.API.Utilidades.dll
+D:\Desarrollos UCaldas\SistemaUsuarioRoles\Backend\Backend.API.Utilidades\obj\Debug\net7.0\refint\Backend.API.Utilidades.dll
+D:\Desarrollos UCaldas\SistemaUsuarioRoles\Backend\Backend.API.Utilidades\obj\Debug\net7.0\Backend.API.Utilidades.pdb
+D:\Desarrollos UCaldas\SistemaUsuarioRoles\Backend\Backend.API.Utilidades\obj\Debug\net7.0\ref\Backend.API.Utilidades.dll

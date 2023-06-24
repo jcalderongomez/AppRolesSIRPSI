@@ -1,0 +1,51 @@
+
+<mat-card>
+    
+    <h1  class="crear-permiso-field">Crear Nuevo Permiso</h1>
+    <form [formGroup]="permisoForm" (ngSubmit)="onSubmit()">      
+
+      <mat-form-field class="crear-permiso-field">
+        <mat-label>Selecione una opción para ver</mat-label>
+        <mat-select [(value)]="selectedVer" formControlName="ver">
+          <mat-option value="true">Activo</mat-option>
+          <mat-option value="false">Inactivo</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="crear-permiso-field">
+        <mat-label>Selecione una opción para editar</mat-label>
+        <mat-select [(value)]="selectedEditar" formControlName="editar">
+          <mat-option value="true">Activo</mat-option>
+          <mat-option value="false">Inactivo</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="crear-permiso-field">
+        <mat-label>Selecione una opción para consultar</mat-label>
+        <mat-select [(value)]="selectedEliminar" formControlName="consultar">
+          <mat-option value="true">Activo</mat-option>
+          <mat-option value="false">Inactivo</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="crear-permiso-field">
+        <mat-label>Selecione una opción para eliminar</mat-label>
+        <mat-select [(value)]="selectedConsultar" formControlName="eliminar">
+          <mat-option value="true">Activo</mat-option>
+          <mat-option value="false">Inactivo</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="crear-permiso-field">
+        <mat-label>Selecione una opción para estado</mat-label>
+        <mat-select [(value)]="selectedEstado" formControlName="estado">
+          <mat-option value="true">Activo</mat-option>
+          <mat-option value="false">Inactivo</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+      <button mat-raised-button [disabled]="!permisoForm.valid" color="primary">Crer Nuevo</button>
+      <button mat-raised-button [routerLink]="['../listar']" color="warn">Cancelar</button>
+    </form>
+  </mat-card>

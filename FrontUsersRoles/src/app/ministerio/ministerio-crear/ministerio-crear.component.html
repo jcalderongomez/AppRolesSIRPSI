@@ -1,0 +1,15 @@
+<mat-card>
+
+  <h1 class="crear-ministerio-field">Crear Nuevo Ministerio</h1>
+  <form [formGroup]="ministerioForm" (ngSubmit)="onSubmit()">
+    
+    <mat-form-field class="crear-ministerio-field">
+      <input matInput placeholder="Nombre del ministerio" formControlName="nombre" >  
+    </mat-form-field>
+    <mat-form-field class="crear-ministerio-field">
+      <input matInput placeholder="Nit del Ministerio"formControlName="nit">
+    </mat-form-field>
+    <button mat-raised-button [disabled]="!ministerioForm.valid" color="primary">Crer Nuevo</button>
+    <button mat-raised-button [routerLink]="['../listar']" color="warn">Cancelar</button>
+  </form>
+</mat-card>

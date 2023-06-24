@@ -1,0 +1,31 @@
+
+<mat-card>
+    <h1 class="crear-psicologo-field">Crear Nuevo Psicologo</h1>
+    <form [formGroup]="psicologoForm" (ngSubmit)="onSubmit()">      
+      <mat-form-field class="crear-psicologo-field">
+        <input matInput placeholder="Matricula profesional del psicologo" formControlName="matriculaProfesional">  
+      </mat-form-field>
+      <mat-form-field class="crear-psicologo-field">
+        <input matInput placeholder="Especializacion del psicologo" formControlName="especializacion">
+      </mat-form-field>
+      <mat-form-field class="crear-psicologo-field">
+        <mat-label>Seleccione un usuario</mat-label>
+        <mat-select [(value)]="selectedUsuario" formControlName="usuarioId">
+                <mat-option *ngFor="let usuario of opcionesUsuario" [value]="usuario.usuarioId">
+                  {{usuario.nombre}}
+                </mat-option>
+              </mat-select>
+      </mat-form-field>
+      <mat-form-field class="crear-psicologo-field">
+        <mat-label>Seleccione el Centro de Apoyo</mat-label>
+        <mat-select [(value)]="selectedCentro" formControlName="centroApoyoId">
+            <mat-option *ngFor="let centro of opcionesCentro" [value]="centro.centroApoyoId">
+              {{centro.nombre}}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+      <button mat-raised-button [disabled]="!psicologoForm.valid" color="primary">Crer Nuevo</button>
+      <button mat-raised-button [routerLink]="['../listar']" color="warn">Cancelar</button>
+    </form>
+  </mat-card>
+  

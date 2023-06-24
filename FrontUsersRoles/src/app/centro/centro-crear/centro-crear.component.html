@@ -1,0 +1,19 @@
+
+<mat-card>
+    <h1  class="crear-centro-field">Crear Nuevo Centro de Apoyo</h1>
+    <form [formGroup]="centroApoyoForm" (ngSubmit)="onSubmit()">      
+      <mat-form-field class="crear-centro-field">
+        <input matInput placeholder="Nombre del Centro de Apoyo" formControlName="nombre">  
+      </mat-form-field>
+      <mat-form-field class="crear-centro-field">
+        <mat-label >Selecciona una opción</mat-label>
+        <mat-select [(value)]="selected" formControlName="empresaId">
+            <mat-option *ngFor="let empresa of opciones" [value]="empresa.empresaId">
+              {{empresa.nombre}}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+      <button mat-raised-button [disabled]="!centroApoyoForm.valid" color="primary">Crer Nuevo</button>
+      <button mat-raised-button [routerLink]="['../listar']" color="warn">Cancelar</button>
+    </form>
+  </mat-card>

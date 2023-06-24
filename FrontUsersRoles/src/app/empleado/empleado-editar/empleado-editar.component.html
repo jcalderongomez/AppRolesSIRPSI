@@ -1,0 +1,33 @@
+<h2 mat-dialog-title>Actualizar Empleado</h2>
+<mat-dialog-content [formGroup]="form">
+  <mat-form-field class="crear-empresa-field">
+    <input matInput placeholder="Nombre de la empresa" formControlName="Nombre">  
+  </mat-form-field>
+  <br/>
+  
+  <mat-form-field class="crear-empresa-field">
+    <input matInput placeholder="Nit de la Empresa"formControlName="Nit">
+  </mat-form-field>
+  <br/>
+  
+  <mat-form-field class="crear-empresa-field">
+    <mat-label>Seleccione el usuario</mat-label>
+    <mat-select  formControlName="UsuarioId">
+      <mat-option *ngFor="let item of opcionesUsuarios" [value]="item.usuarioId">{{item.nombre}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br/>
+
+  <mat-form-field class="crear-empresa-field">
+    <mat-label>Seleccione el Rol</mat-label>
+    <mat-select  formControlName="RolId">
+      <mat-option *ngFor="let item of opcionesRoles" [value]="item.rolId">{{item.nombre}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br/>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button (click)="cerrar()">Cerrar</button>
+    <button mat-raised-button color="primary" (click)="guardar()">Guardar</button>
+</mat-dialog-actions>

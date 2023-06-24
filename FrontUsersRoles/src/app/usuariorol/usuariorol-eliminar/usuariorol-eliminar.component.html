@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Eliminar Rol de Usuario</h2>
+<mat-dialog-content>
+    <mat-label name="label"></mat-label>
+   <h1>¿Desea Eliminar el Rol: "{{ this.id }}" ?</h1>
+    
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button (click)="eliminarUsuarioRol()" color="primary">Eliminar</button>
+    <button mat-raised-button  mat-dialog-close color="warn">Cancelar</button>
+</mat-dialog-actions>

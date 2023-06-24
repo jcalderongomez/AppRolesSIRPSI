@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Login | Sirpsi</title>
+  <!-- <link rel="stylesheet" href="css/estilos.css"> -->
+  <style>
+    /* Cambiar fuente de todos los botones */
+    button {
+      font-family: Tahoma, Geneva, sans-serif;
+    }
+
+    /* Centrar el texto de los botones */
+    #iniciar-sesion,
+    #registrar-empresa,
+    #tutoriales,
+    #ayuda {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Contenedor principal con logo y botones de acción -->
+  <div class="login-box">
+    <img class="logotipo" src="../../assets/img_sirspi/logo_sirpsi.png" alt="Logo de Sirpsi">
+    <h1>Bienvenido/a</h1>
+
+    <button id="iniciar-sesion" (click)="login()">Iniciar sesión</button>
+    <button id="info-iniciar-sesion">?</button>
+    <div id="mensaje-iniciar-sesion" style="display: none;">
+      <h2 class="titulo-mensaje">Estimado(a) usuario(a)</h2>
+      <p class="texto-mensaje">Para <strong>Iniciar sesión</strong>, es necesario tener una cuenta registrada como
+        Administrador de Empresa, Psicólogo Especialista SST o Trabajador. Si necesita más
+        información, le recomendamos consultar la sección <strong>Tutoriales y capacitación</strong>.</p>
+      <button id="aceptar">Aceptar</button>
+    </div>
+
+
+    <button id="registrar-empresa">Registrar empresa</button>
+    <button id="info-registrar-empresa">?</button>
+    <div id="mensaje-registrar-empresa" style="display: none;">
+      <h2 class="titulo-mensaje">Estimado(a) usuario(a)</h2>
+      <p class="texto-mensaje">En esta sección, podrás registrar tu empresa, ya sea natural, jurídica o entidad del
+        sector público y asignar a
+        un administrador de empresa. Antes de proceder con el registro, se recomienda consultar la sección
+        <strong>Tutoriales y capacitación</strong> para obtener más información sobre el proceso.
+      </p>
+      <button id="aceptar-2">Aceptar</button>
+    </div>
+
+
+    <button id="tutoriales">Tutoriales y capacitación</button>
+    <button id="info-tutoriales">?</button>
+    <div id="mensaje-tutoriales-capacitacion" style="display: none;">
+      <h2 class="titulo-mensaje">Estimado(a) usuario(a)</h2>
+      <p class="texto-mensaje">Para ayudarle a aprender a utilizar el sistema SIRPSI, se pone a su disposición una serie
+        de videos tutoriales
+        y material de capacitación. Le recomendamos dedicar el tiempo necesario para revisar y estudiar estos recursos,
+        de manera que pueda aprovechar al máximo la herramienta y disfrutar de una experiencia exitosa.
+      </p>
+      <button id="aceptar-3">Aceptar</button>
+    </div>
+
+
+    <button id="ayuda">Ayuda y soporte técnico</button>
+    <button id="info-ayuda-soporte">?</button>
+    <div id="mensaje-ayuda-soporte" style="display: none;">
+      <h2 class="titulo-mensaje">Estimado(a) usuario(a)</h2>
+      <p class="texto-mensaje">En este espacio, puede radicar sus PQRSD relacionadas con el funcionamiento del sistema
+        SIRPSI. Sin embargo,
+        antes de realizar cualquier solicitud, se recomienda consultar el material disponible en la sección
+        <strong>Tutoriales y capacitación</strong> para aclarar cualquier duda o inquietud.
+      </p>
+      <button id="aceptar-4">Aceptar</button>
+    </div>
+  </div>
+  <script src="../../assets/scritps/funcion.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<h2 mat-dialog-title>Actualizar Usuario</h2>
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field class="crear-empresa-field">
+        <input matInput placeholder="Nombre de la empresa" formControlName="nombre" >  
+    </mat-form-field>
+    <br/>
+    
+    <mat-form-field class="crear-empresa-field">
+        <input matInput placeholder="Nombre de la empresa" formControlName="cedula" >  
+    </mat-form-field>
+    <br/>
+    
+    <mat-form-field class="crear-empresa-field">
+        <input matInput placeholder="Nombre de la empresa" formControlName="email" >  
+    </mat-form-field>
+    <br/>
+    
+    <mat-form-field class="crear-empresa-field">
+        <input matInput placeholder="Nombre de la empresa" formControlName="usuario" >  
+    </mat-form-field>
+    <br/>
+    
+    <mat-form-field class="crear-empresa-field">
+        <input matInput placeholder="Nombre de la empresa" formControlName="password" >  
+    </mat-form-field>
+    <br/>
+    
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button (click)="cerrar()">Cerrar</button>
+    <button mat-raised-button color="primary" (click)="guardar()">Guardar</button>
+</mat-dialog-actions>

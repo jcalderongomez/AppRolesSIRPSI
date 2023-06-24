@@ -1,0 +1,29 @@
+
+<mat-card>
+    <h1  class="crear-empresa-field">Crear Nueva empresa</h1>
+    <form [formGroup]="empresaForm" (ngSubmit)="onSubmit()">      
+      <mat-form-field class="crear-empresa-field">
+        <input matInput placeholder="Nombre de la empresa" formControlName="Nombre">  
+      </mat-form-field>
+      <mat-form-field class="crear-empresa-field">
+        <input matInput placeholder="Nit  de la empresa" formControlName="Nit">
+      </mat-form-field>
+      <mat-form-field class="crear-empresa-field">
+        <mat-label>Seleccione el ministerio</mat-label>
+        <mat-select [(value)]="selectedMinisterio" formControlName="MinisterioId">
+            <mat-option *ngFor="let ministerio of opciones" [value]="ministerio.ministerioId">
+              {{ministerio.nombre}}
+            </mat-option>
+          </mat-select>
+      </mat-form-field>
+      <mat-form-field class="crear-empresa-field">
+        <mat-label>Selecione una opción</mat-label>
+        <mat-select formControlName="Estado">
+          <mat-option [value]="true">Activo</mat-option>
+          <mat-option [value]="false">Inactivo</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button [disabled]="!empresaForm.valid" color="primary">Crer Nuevo</button>
+      <button mat-raised-button [routerLink]="['../listar']" color="warn">Cancelar</button>
+    </form>
+  </mat-card>

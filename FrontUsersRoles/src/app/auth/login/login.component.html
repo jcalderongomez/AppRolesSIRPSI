@@ -1,0 +1,43 @@
+<div [formGroup]="loginForm">
+  <form (submit)="send()">
+    <mat-card>
+      <mat-card-title>
+        Login
+      </mat-card-title>
+      <mat-card-content>
+        <mat-form-field>
+          <input matInput placeholder="User Name" name="loginData.userName"  [(ngModel)]="loginData.userName" 
+          matTooltip="Ingrese su usuario" onkeydown="return avoidWhitespace(event)">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+          <input type="cedula" matInput placeholder="Cédula" name="cedula" [(ngModel)]="loginData.cedula" matTooltip="Ingrese su cédula" onkeydown="return avoidWhitespace(event)">
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+          <input type="password" name="password" matInput placeholder="Password" matTooltip="Ingrese su password" 
+            [type]="hide ? 'password' : 'text'" 
+            [(ngModel)]="loginData.password" onkeydown="return avoidWhitespace(event)">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>        
+        </mat-form-field>
+        <br/>
+        <mat-checkbox checked="" [(ngModel)]="loginData.aceptacion" matTooltip="Aceptación de la Política de Tratamiento de Datos Personales y la Política de Privacidad y Condiciones de Uso.">
+          Acepto potitica de tratamiento de datos
+        </mat-checkbox>
+        <br/>
+        <re-captcha id="recaptcha" name="recaptcha" #recaptcha="ngModel" [(ngModel)]="token" required [class.is-invalid]="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)"></re-captcha>
+        <div *ngIf="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)" class="invalid-feedback">
+          <div *ngIf="recaptcha.errors?.['required']">
+            This field is required.
+          </div>
+        </div>  
+        <div class="row">
+          <div class="col-sm-12 mb-2">
+            <!-- <button type="button" class="btn btn-sm btn-primary" (click)="send()">Send</button> -->
+            <button type="button" class="btn btn-sm btn-primary" (click)="login()">login</button>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</div>
